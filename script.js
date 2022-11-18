@@ -22,16 +22,16 @@ var rockPaperscissors = function() {
     console.log(computerChoice);
 
     if (userChoice === computerChoice) {
-     window.confirm("Tied! Try Again");
+     window.confirm("Computer picked " + computerChoice + "." + " Tied! Try Again");
      stats.ties++;
      return rockPaperscissors();
     } else if ((userChoice === "R" && computerChoice === "S") ||
     (userChoice === "P" && computerChoice === "R") ||
     (userChoice === "S" && computerChoice === "P")) {
-        window.confirm("Congrats! You won.")
+        window.confirm("Computer picked " + computerChoice + "." + " Congrats! You won.")
         stats.wins++;
     } else {
-        window.confirm("Sorry! You lose.")
+        window.confirm("Computer picked " + computerChoice + "." + " Sorry! You lose.")
         stats.losses++;
     }
 

@@ -10,6 +10,11 @@ var rockPaperscissors = function() {
     var userChoice = window.prompt("Please enter R, S or P").toUpperCase();
     console.log(userChoice);
 
+    if ((userChoice !== gameOptions[0]) && (userChoice !== gameOptions[1]) && (userChoice !== gameOptions[2])) {
+    window.confirm("Incorrect value, Try again!");
+    rockPaperscissors();
+    }
+
 
     var index = Math.floor(Math.random() * gameOptions.length); 
 
